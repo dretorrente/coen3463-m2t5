@@ -1,0 +1,119 @@
+extends layout
+
+block content
+    section.hero.is-primary.is-small.header-image.contact
+      .hero-head
+        header.nav
+          .container
+            .nav-left
+              a.nav-item(href='/')
+                img(src='images/wpm.png', alt='Logo', style='color:white')
+            span.nav-toggle
+              span
+              span
+              span
+            .nav-right.nav-menu
+              a.nav-item(href='/')
+                | Home
+              a.nav-item(href='/band')
+                | Services
+              a.nav-item.is-active(href='/contact')
+                | Contact Us
+              span.nav-item
+                a.button.is-dark.is-outlined.is-inverted(href='https://coen3463-m1t5.herokuapp.com', target='_blank')
+                  span.icon
+                    i.fa.fa-code
+                  span Team Profile
+
+      .hero-body
+       .container.has-text-centered
+         br
+         h2.subtitle.is-4
+           | Feel free to
+         h1.title.is-1
+           | Contact Us
+         br
+    
+    .section.services
+      .container
+        .columns
+          .column.is-6.has-text-centered
+            .title.is-2
+              | Send us a message
+            hr
+            br
+
+            form(method='post', action='/contact').contact
+              .control.is-horizontal
+                .control-label
+                  label.label From
+                .control.is-grouped
+                  p.control.is-expanded
+                    input.input(type='text', name='name', placeholder='Your name', required)
+                  p.control.is-expanded
+                    input.input(type='email', name='email', placeholder='Your email', required)
+
+              .control.is-horizontal
+                .control-label
+                  label.label Event
+                .control.is-grouped
+                  p.control.is-expanded
+                    input.input(type='text', name='event', placeholder='Enter the type of event. Eg. Wedding, Birthday, etc.', required)
+
+              .control.is-horizontal
+                .control-label
+                  label.label Message
+                .control
+                  textarea.textarea(name='message', placeholder='Enter your message here...', required)
+
+              p.control.contact
+                button.button.is-light.is-outlined.is-inverted(type='submit') Submit
+            br
+            hr
+            .title.is-3
+              | Give us a call at 
+              strong 8-7000
+            .subtitle.is-3
+              | Or maybe visit us at our office located at 
+              strong Beverly Center, Los Angeles, California
+            hr
+                        
+          .column.is-5.is-offset-1.has-text-centered
+            #map
+
+    include footer
+    script.
+      function initMap() {
+      var uluru = {lat: 34.075, lng: -118.377};
+      var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 18,
+      center: uluru
+      });
+      var marker = new google.maps.Marker({
+      position: uluru,
+      map: map
+      });
+      }
+    script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBu2hs_TxRGIBuaZeJXagh6w5eznnUQQIY&callback=initMap')
+
+    if sent === 'yes'
+      include modals/thankModal
+      script(async='', type='text/javascript', src='javascripts/bulma.js')
+      script(type='text/javascript', src='javascripts/jquery-1.11.1.min.js')
+      script(type='text/javascript', src='javascripts/materialize.js')
+      script.
+        var modal = $('#thankModal');
+        modal.addClass('is-active');
+        $('.delete').on('click', function() {
+          modal.removeClass('is-active');
+        });
+
+    else if sent === 'no'
+      script(type='text/javascript').
+        alert('Failed to send the message.\n You may try again. Or directly email us at ironman.programmer@gmail.com');
+
+
+//  window.onclick = function (event) {
+//     event.stopPropagation();
+//      modal.removeClass('is-active');
+//  };

@@ -1,0 +1,70 @@
+extends layout
+
+block content
+    section.hero.is-primary.is-small.header-image.services
+      .hero-head
+        header.nav
+          .container
+            .nav-left
+              a.nav-item(href='/')
+                img(src='images/wpm.png', alt='Logo', style='color:white')
+            span.nav-toggle
+              span
+              span
+              span
+            .nav-right.nav-menu
+              a.nav-item(href='/')
+                | Home
+              a.nav-item.is-active(href='/band')
+                | Services
+              a.nav-item(href='/contact')
+                | Contact Us
+              span.nav-item
+                a.button.is-dark.is-outlined.is-inverted(href='https://coen3463-m1t5.herokuapp.com', target='_blank')
+                  span.icon
+                    i.fa.fa-code
+                  span Team Profile
+
+      .hero-body
+       .container.has-text-centered
+         h2.subtitle.is-4
+           | Check out our
+         h1.title.is-1
+            | Services Offered
+          div.tabs.is-centered.is-toggle.is-medium
+            ul.services
+
+                li(class=(servName === "Live Band" ? 'is-active' : ''))
+                    a(href='/band')
+                        span.icon.is-medium
+                            i.fa.fa-microphone
+                        span
+                            | Live Band
+                li(class=(servName === "Live Dj" ? 'is-active' : ''))
+                    a(href='/dj')
+                        span.icon.is-medium
+                            i.fa.fa-laptop
+                        span
+                            | Live DJ
+                li(class=(servName === "Production" ? 'is-active' : ''))
+                    a(href='production')
+                        span.icon.is-medium
+                            i.fa.fa-lightbulb-o
+                        span
+                            | Production
+    if servName === "Live Band"
+        include band
+    if servName === "Live Dj"
+        include dj
+    if servName === "Production"
+        include production
+
+    include footer
+    script(async='', type='text/javascript', src='javascripts/bootstrap.min.js')
+    script(type='text/javascript').
+      $('.carousel').carousel();
+    script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js')
+    script(type='text/javascript', src='javascripts/jquery-1.11.1.min.js')
+    script(type='text/javascript', src='javascripts/materialize.js')
+    script(type='text/javascript', src='javascripts/login.js')
+    script(type='text/javascript', src='javascripts/global.js')

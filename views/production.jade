@@ -1,0 +1,49 @@
+.section.services
+  .container
+    .columns
+      .column.is-6
+        .carousel.slide#carousel-choices(data-ride='carousel', data-pause='hover', data-interval='3000', data-keyboard='true')
+          ol.carousel-indicators
+            li.active(data-target="#carousel-choices", data-slide-to="0")
+            li(data-target="#carousel-choices", data-slide-to="1")
+            li(data-target="#carousel-choices", data-slide-to="2")
+          .carousel-inner(role="listbox")
+            .item.active
+              img(src='#{items[2].imagePath1}', alt='Lighting System')
+              .carousel-caption
+                .title.is-2
+                  strong Lights
+                .subtitle.is-3
+                  | Come and watch the pretty lights.
+            .item
+              img(src='#{items[2].imagePath2}', alt='Sound System')
+              .carousel-caption
+                .title.is-2
+                  strong Sounds
+                .subtitle.is-3
+                  | Feel the music.
+            .item
+              img(src='#{items[2].imagePath3}', alt='Hosts')
+              .carousel-caption
+                .title.is-2
+                  strong Hosting
+                .subtitle.is-3
+                  | Liven up the party.
+      .column.is-5.is-offset-1.has-text-centered.servContent
+        .title.is-1
+          | #{items[2].title}
+        p.subtitle.is-5.has-text-muted
+          | #{items[2].price}
+        hr
+        br
+        
+        p
+          | #{items[2].description1}
+        br
+        p
+          | #{items[2].description2}
+        br
+        a.button.is-light.is-outlined.is-inverted(href='/contact')
+          span Get in touch
+          span.icon
+            i.fa.fa-chevron-right

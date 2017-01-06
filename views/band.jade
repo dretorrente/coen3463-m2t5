@@ -1,0 +1,80 @@
+.section.services
+  .container
+    .columns
+      .column.is-6
+        .carousel.slide#carousel-choices(data-ride='carousel', data-pause='hover', data-interval='3000', data-keyboard='true')
+          ol.carousel-indicators
+            li.active(data-target="#carousel-choices", data-slide-to="0")
+            li(data-target="#carousel-choices", data-slide-to="1")
+            li(data-target="#carousel-choices", data-slide-to="2")
+            li(data-target="#carousel-choices", data-slide-to="3")
+          .carousel-inner(role="listbox")
+            .item.active
+              img(src= '#{items[0].imagePath1}', alt='Adele')
+              .carousel-caption
+                .title.is-2
+                  strong Adele
+                .subtitle.is-3
+                  | Hello, it's me.
+            .item
+              img(src='#{items[0].imagePath2}', alt='The 1975')
+              .carousel-caption
+                .title.is-2
+                  strong The 1975
+                .subtitle.is-3
+                  | I know the sound of your heart.
+            .item
+              img(src='#{items[0].imagePath3}', alt='Coldplay')
+              .carousel-caption
+                .title.is-2
+                  strong Coldplay
+                .subtitle.is-3
+                  | But if you never try, then you'll never know.
+            .item
+              img(src='#{items[0].imagePath4}', alt='Maroon 5')
+              .carousel-caption
+                .title.is-2
+                  strong Maroon 5
+                .subtitle.is-3
+                  | I'm following the map that leads to you.
+
+      .column.is-5.is-offset-1.has-text-centered.servContent
+        .title.is-1(style='text-transform:uppercase')
+          | #{items[0].title}
+        p.subtitle.is-5.has-text-muted
+          | #{items[0].price}
+        hr
+        br
+
+        p
+          | #{items[0].description1}
+        br
+        p
+          | #{items[0].description2}
+        br
+        a.button.is-light.is-outlined.is-inverted(href='/contact')
+          span Get in touch
+          span.icon
+            i.fa.fa-chevron-right
+//    br
+//    hr
+//    .columns
+//      .column.is-offset-2.is-8.is-offset-2
+//        .carouselbox
+//          ol.content
+//            li
+//              blockquote
+//                | The room looked beautiful due to the combination of the lights and the flowers you put together for us.  It really transformed the room and the bar and white carpet also looked great.
+//              p
+//                | - Miriam , June 2013
+//            li.current
+//              p
+//                | The whole afternoon and evening were magical from start to finish.  When we walked into the ballroom, it was like fairyland, it took our breath away!!  The lighting and music were perfect - I don't know what we expected but it surpassed everything that we thought it would be.
+//              p
+//                | - Claudia , April 2016
+//            li
+//              p
+//                | The best wedding band I have ever, ever heard and believe me, I have seen quite a few good wedding bands over the years. Creation blew my socks off. Everybody can sing. Everybody can dance. These guys are simply phenomenal.
+//              p
+//                | - Anna , December 2015
+//        hr

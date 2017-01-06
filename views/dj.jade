@@ -1,0 +1,58 @@
+.section.services
+  .container
+    .columns
+      .column.is-6
+        .carousel.slide#carousel-choices(data-ride='carousel', data-pause='hover', data-interval='3000', data-keyboard='true')
+          ol.carousel-indicators
+            li.active(data-target="#carousel-choices", data-slide-to="0")
+            li(data-target="#carousel-choices", data-slide-to="1")
+            li(data-target="#carousel-choices", data-slide-to="2")
+            li(data-target="#carousel-choices", data-slide-to="3")
+          .carousel-inner(role="listbox")
+            .item.active
+              img(src= '#{items[1].imagePath1}', alt='The Chainsmokers')
+              .carousel-caption
+                .title.is-2
+                  strong The Chainsmokers
+                .subtitle.is-3.is-hidden-tablet-only.is-hidden-desktop-only
+                  | Say you'll never let me go.
+            .item
+              img(src= '#{items[1].imagePath2}', alt='David Guetta')
+              .carousel-caption
+                .title.is-2
+                  strong David Guetta
+                .subtitle.is-3.is-hidden-tablet-only.is-hidden-desktop-only
+                  | You shoot me down but I won't fall.
+            .item
+              img(src='#{items[1].imagePath3}', alt='Calvin Harris')
+              .carousel-caption
+                .title.is-2
+                  strong Calvin Harris
+                .subtitle.is-3.is-hidden-tablet-only.is-hidden-desktop-only
+                  | This is what you came for.
+            .item
+              img(src='#{items[1].imagePath4}', alt='Zedd')
+              .carousel-caption
+                .title.is-2
+                  strong Zedd
+                .subtitle.is-3.is-hidden-tablet-only.is-hidden-desktop-only
+                  | If you lose yourself, I will find you.
+
+      .column.is-5.is-offset-1.has-text-centered.servContent
+        .title.is-1
+          | #{items[1].title}
+        p.subtitle.is-5.has-text-muted
+          | #{items[1].price}
+        hr
+        br
+
+        p
+          | #{items[1].description1}
+        br
+        p
+          | #{items[1].description2}
+        br
+        a.button.is-light.is-outlined.is-inverted(href='/contact')
+          span Get in touch
+          span.icon
+            i.fa.fa-chevron-right

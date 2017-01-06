@@ -1,0 +1,63 @@
+extends layout
+
+block content
+    section.hero.is-primary.is-large.header-image.home.is-fullheight
+      .hero-head
+        header.nav
+          .container
+            .nav-left
+              a.nav-item(href='/')
+                img(src='images/wpm.png', alt='Logo')
+            span.nav-toggle
+              span
+              span
+              span
+            .nav-right.nav-menu
+              a.nav-item.is-active(href='/')
+                | Home
+              a.nav-item(href='/band')
+                | Services
+              a.nav-item(href='/contact')
+                | Contact Us
+              span.nav-item
+                a.button.is-dark.is-outlined.is-inverted(href='https://coen3463-m1t5.herokuapp.com', target='_blank')
+                  span.icon
+                    i.fa.fa-code
+                  span Team Profile
+      .hero-body
+        .container.has-text-left
+          h1.title.home
+            | Your musical needs.
+          h2.subtitle.home
+            | Just a call away.
+          div
+            p.home
+              | Liven up the party with bands, DJs, and awesome music to dance to.
+            p.home
+              | We play music to the best parties in town.
+
+          p.home
+            a(href='/band')
+              span.icon.is-medium
+                i.fa.fa-microphone
+              span
+                | #{items[0].title}
+            span
+              |   |   
+            a(href='/dj')
+              span.icon.is-medium
+                i.fa.fa-laptop
+              span
+                | #{items[1].title}
+            span
+              |   |   
+            a(href='/production')
+              span.icon.is-medium
+                i.fa.fa-lightbulb-o
+              span
+                | #{items[2].title}
+
+    script(async='', type='text/javascript', src='javascripts/bulma.js')
+    script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js')
+    script(type='text/javascript', src='javascripts/jquery-1.11.1.min.js')
+    script(type='text/javascript', src='javascripts/materialize.js')
