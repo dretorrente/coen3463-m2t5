@@ -1,14 +1,14 @@
-#[We PLAY MUSIC](https://coen3463-m2t5.herokuapp.com)
+##Software Engineering Module 2 Express JS
 
 [![WE PLAY MUSIC](./readme.img/music.png?raw=true)](https://coen3463-m2t5.herokuapp.com)
 
-###WE PLAY MUSIC is a Music Service system built in Node.js is built on top of the following libraries:
+#[We PLAY MUSIC](https://coen3463-m2t5.herokuapp.com) is a Music Service system built in Node.js is built on top of the following libraries:
 
 * [Node.js](http://nodejs.org/) - Application Server
 * [Express.js](http://expressjs.com/) - Node.js Web Framework
 * [MongoDb](http://mongodb.org/) - Database Storage
 * [Jade](http://jade-lang.com/) - HTML Templating Engine
-* [EmailJS](https://nodemailer.com/) - Node.js > SMTP Server Middleware
+* [Nodemailer](https://nodemailer.com/) - Node.js > SMTP Server Middleware
 
 
 ##Installation & Setup
