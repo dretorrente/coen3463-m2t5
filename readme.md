@@ -2,7 +2,7 @@
 
 [![WE PLAY MUSIC](./readme.img/music.png?raw=true)](https://coen3463-m2t5.herokuapp.com)
 
-#[We PLAY MUSIC](https://coen3463-m2t5.herokuapp.com) is a Music Service system built in Node.js is built on top of the following libraries:
+#[We PLAY MUSIC](https://coen3463-m2t5.herokuapp.com) is a Music Service system built on top of the following libraries:
 
 * [Node.js](http://nodejs.org/) - Application Server
 * [Express.js](http://expressjs.com/) - Node.js Web Framework
